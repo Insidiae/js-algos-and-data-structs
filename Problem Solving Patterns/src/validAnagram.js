@@ -31,5 +31,3 @@ function validAnagram(str1, str2) {
   // If the two Frequency Counter objects are the exact same, then the two strings are anagrams!
   return true;
 }
-
-validAnagram('cinema', 'iceman');
