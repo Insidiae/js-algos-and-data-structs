@@ -1,4 +1,4 @@
-# Recursion Practice
+# Recursion Practice - Sums, Grids, and Partitions
 
 ## Sum
 
