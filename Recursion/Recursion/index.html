@@ -14,8 +14,40 @@
     </p>
     <ul>
       <li>
-        <code> someRecursiveFunction() </code>
+        <code> reverse('awesome') // should return 'emosewa' </code>
+      </li>
+      <li>
+        <code> isPalindrome('tacocat') // should return true </code>
+      </li>
+      <li>
+        <code>
+          someRecursive([4,6,8,9], val => val % 2 !== 0) // should return true
+        </code>
+      </li>
+      <li>
+        <code>
+          everyRecursive([4,6,8], val => val % 2 === 0) // should return true
+        </code>
+      </li>
+      <li>
+        <code>
+          capitalizeFirst(['car','taco','banana']); // should return
+          ['Car','Taco','Banana']
+        </code>
+      </li>
+      <li>
+        <code>
+          capitalizeWords(['i', 'am', 'learning', 'recursion']); // should
+          return ['I', 'AM', 'LEARNING', 'RECURSION']
+        </code>
       </li>
     </ul>
+
+    <script src="src/reverse.js"></script>
+    <script src="src/isPalindrome.js"></script>
+    <script src="src/someRecursive.js"></script>
+    <script src="src/everyRecursive.js"></script>
+    <script src="src/capitalizeFirst.js"></script>
+    <script src="src/capitalizeWords.js"></script>
   </body>
 </html>
