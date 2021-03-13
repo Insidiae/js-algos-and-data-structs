@@ -31,9 +31,29 @@
       </li>
       <li>
         <code>
+          flatten([1, [2, [3, 4], [[5]]]]) // should return [1, 2, 3, 4, 5]
+        </code>
+      </li>
+      <li>
+        <code>
           capitalizeFirst(['car','taco','banana']); // should return
           ['Car','Taco','Banana']
         </code>
+      </li>
+      <li>
+        <pre>
+          <code>
+let obj1 = {
+  a: 2,
+  b: {b: 2, bb: {b: 3, bb: {b: 2}}},
+  c: {c: {c: 2}, cc: 'ball', ccc: 5},
+  d: 1,
+  e: {e: {e: 2}, ee: 'car'}
+};
+
+nestedEvenSum(obj1); // should return 10
+          </code>
+        </pre>
       </li>
       <li>
         <code>
@@ -41,13 +61,78 @@
           return ['I', 'AM', 'LEARNING', 'RECURSION']
         </code>
       </li>
+      <li>
+        <pre>
+          <code>
+let obj2 = {
+  num: 1,
+  test: [],
+  data: {
+    val: 4,
+    info: {
+      isRight: true,
+      random: 66
+    }
+  }
+};
+
+stringifyNumbers(obj2);
+
+// should return the ff. object:
+/*
+{
+  num: "1",
+  test: [],
+  data: {
+    val: "4",
+    info: {
+      isRight: true,
+      random: "66"
+    }
+  }
+}
+*/
+          </code>
+        </pre>
+      </li>
+      <li>
+        <pre>
+          <code>
+let obj3 = {
+  stuff: "foo",
+  data: {
+    val: {
+      thing: {
+        info: "bar",
+        moreInfo: {
+          someMoreInfo: {
+            num: 42069
+          },
+          evenMoreInfo: {
+            weMadeIt: "baz"
+          }
+        }
+      }
+    }
+  }
+}
+
+collectStrings(obj3) // should return ["foo", "bar", "baz"])
+          </code>
+        </pre>
+      </li>
     </ul>
 
+    <script src="src/utils/isObject.js"></script>
     <script src="src/reverse.js"></script>
     <script src="src/isPalindrome.js"></script>
     <script src="src/someRecursive.js"></script>
     <script src="src/everyRecursive.js"></script>
+    <script src="src/flatten.js"></script>
     <script src="src/capitalizeFirst.js"></script>
+    <script src="src/nestedEvenSum.js"></script>
     <script src="src/capitalizeWords.js"></script>
+    <script src="src/stringifyNumbers.js"></script>
+    <script src="src/collectStrings.js"></script>
   </body>
 </html>
