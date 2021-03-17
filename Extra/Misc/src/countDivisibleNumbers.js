@@ -1,26 +1,14 @@
-function countDivisibleNumbers(x, y, p) {
-  //  Get the smallest number greater than x,
-  //  that is also divisible by p
-  const pStart = p * (Math.ceil(x / p) - 1) + p;
-  //  Initialize a number for counting the multiples of p
-  let count = 0;
-  //  Loop numbers using multiples of p,
-  //  starting from the number we calculated,
-  //  until we get past y
-  for(let i = pStart; i <= y; i += p) {
-    // Increment the count
-    count++;
-  }
-  //  Return the count
-  return count;
-}
+const countDivisibleNumbers = (x, y, p) => Math.floor(y / p) - Math.ceil(x / p) + 1;
 
 const myForm = document.myForm;
 myForm.addEventListener("submit", e => {
   e.preventDefault();
-  const x = +myForm.x.value;
-  const y = +myForm.y.value;
+  let x = +myForm.x.value;
+  let y = +myForm.y.value;
   const p = +myForm.p.value;
+
+  //* Swap the two range numbers if first number is greater than the second number
+  if(x > y) [x, y] = [y, x];
 
   const result = countDivisibleNumbers(x, y, p);
 

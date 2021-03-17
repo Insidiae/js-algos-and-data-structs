@@ -11,7 +11,7 @@ Example:
 
 ---
 
-### Solution
+### Solution 1
 ```js
 function countDivisibleNumbers(x, y, p) {
   //  Get the smallest number greater than x,
@@ -30,3 +30,25 @@ function countDivisibleNumbers(x, y, p) {
   return count;
 }
 ```
+> **Time Complexity:** O(n)
+
+### Solution 2
+```js
+function countDivisibleNumbers(x, y, p) {
+  //  Get the smallest number greater than x,
+  //  that is also divisible by p
+  const pStart = Math.ceil(x / p);
+  //  Get the largest number less than y,
+  //  that is also divisible by p
+  const pEnd = Math.floor(y / p);
+  //  Subtract the end and start values to get
+  //  the number of integers divisible by p within the range
+  return pEnd - pStart + 1;
+}
+```
+
+### 🔥 Hotshot one-liner
+```js
+const countDivisibleNumbers = (x, y, p) => Math.floor(y / p) - Math.ceil(x / p) + 1;
+```
+> **Time Complexity:** O(1)
