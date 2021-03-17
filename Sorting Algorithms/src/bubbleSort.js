@@ -22,5 +22,6 @@ function bubbleSort(arr) {
     }
   }
   //  Return the sorted array
+  console.log("Sorted array is:");
   return arr;
 }
