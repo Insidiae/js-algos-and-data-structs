@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Divisible Numbers</title>
+  </head>
+  <body>
+    <h1>Count Divisible Numbers</h1>
+
+    <form name="myForm" action="#">
+      <div>
+        <label for="x">
+          First Number (x) :
+          <input name="x" id="x" type="number" step="1" value="5" />
+        </label>
+      </div>
+      <div>
+        <label for="y">
+          Second Number (y) :
+          <input name="y" id="y" type="number" step="1" value="20" />
+        </label>
+      </div>
+      <div>
+        <label for="p">
+          Third Number (p) :
+          <input name="p" id="p" type="number" step="1" value="3" />
+        </label>
+      </div>
+
+      <button type="submit">Get Result</button>
+    </form>
+
+    <h3 id="result">
+      Find the number of integers within the range x..y and that are divisible
+      by p.
+    </h3>
+
+    <script src="src/countDivisibleNumbers.js"></script>
+  </body>
+</html>
