@@ -31,20 +31,24 @@ function merge(arr1, arr2) {
   return newArr;
 }
 
+var pass = 1;
 //* The actual Merge Sort function
 function mergeSort(arr) {
   //  If there's 1 element or less in the input array,
   //  simply return the input array
   if(arr.length <= 1) return arr;
   //  Otherwise:
-  //  Split the input array in half,
-  //  and call mergeSort on both halves
-  const mid = Math.floor(arr.length / 2);
-  const left = mergeSort(arr.slice(0, mid));
-  const right = mergeSort(arr.slice(mid));
+  //  Split the input array in half...
+  console.log(`Pass #${pass}`);
+  var oldPass = pass;
+  pass++;
+  var mid = Math.floor(arr.length / 2);
+  console.log("Splitting array into",arr.slice(0, mid),"and",arr.slice(mid),"...");
+  //  ...and call mergeSort on both halves
+  var left = mergeSort(arr.slice(0, mid));
+  var right = mergeSort(arr.slice(mid));
   //  Merge both halves of the input array,
   //  and return the merged array which is now also sorted
+  console.log(`From pass #${oldPass}: Merging`, left, "and", right, "...");
   return merge(left, right);
 }
-
-mergeSort([8,7,6,5,4,3,2,1]);
