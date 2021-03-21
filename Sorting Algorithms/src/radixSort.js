@@ -2,7 +2,7 @@
 //* in the given digit position (starting from 0)
 //! Assume we're working with base 10 (decimal) for now
 function getDigit(num, place) {
-  //  Keep dividing my 10 (base) until we reach our desired digit,
+  //  Keep dividing by 10 (base) until we reach our desired digit,
   //  then use modulo operator to get only the digit that we want
   return Math.floor(Math.abs(num) / Math.pow(10, place)) % 10;
 }

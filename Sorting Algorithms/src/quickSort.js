@@ -34,7 +34,7 @@ function pivot(arr, startIdx = 0, endIdx = arr.length - 1, pass) {
 
 // pivot([4,8,2,1,5,7,6,3])
 
-//* Quick Sort
+//* Main Logic for Quick Sort
 function quickSort(arr) {
   //  Count the number of iterations we've made so far,
   //  and display it later

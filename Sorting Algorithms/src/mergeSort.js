@@ -31,8 +31,7 @@ function merge(arr1, arr2) {
   return newArr;
 }
 
-// var pass = 1;
-//* The actual Merge Sort function
+//* Main Logic for Merge Sort
 function mergeSort(arr) {
   //  Count the number of iterations we've made so far,
   //  and display it later
