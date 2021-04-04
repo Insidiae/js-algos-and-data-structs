@@ -167,4 +167,57 @@ class SinglyLinkedList {
     //  Return the value of the removed ListNode
     return value;
   }
+  //* The reverse function reverses the order
+  //* of the ListNodes in the linked list
+  reverse() {
+    //  If list is empty, do nothing
+    if(!this.length) return;
+    //  Create two ponters for the current and next ListNode,
+    //  starting from the head
+    let currentNode = this.head;
+    let nextNode = this.head.next;
+    //  Create another ListNode for iterating through the list,
+    //  then loop through the list using that iterator
+    //? I just tried using a for loop here just for fun
+    for(
+      let iteratorNode = this.head.next;
+      iteratorNode !== null;
+      iteratorNode = nextNode
+    ) {
+      //  Set the next ListNode to be the
+      //  iterating ListNode's next property
+      nextNode = iteratorNode.next;
+      //  Set the iterating ListNode's next property to be
+      //  the current ListNode
+      iteratorNode.next = currentNode;
+      //  Set the current ListNode to be the iterating ListNode
+      currentNode = iteratorNode;
+    }
+    //? A while loop can also work here, probably better
+    // let iteratorNode = nextNode;
+    // while(iteratorNode !== null) {
+    //   //  Set the next ListNode to be the
+    //   //  iterating ListNode's next property
+    //   nextNode = iteratorNode.next;
+    //   //  Set the iterating ListNode's next property to be
+    //   //  the current ListNode
+    //   iteratorNode.next = currentNode;
+    //   //  Set the current ListNode to be the iterating ListNode
+    //   currentNode = iteratorNode;
+    //   //  Set the iterator ListNode to be the next ListNode
+    //   iteratorNode = nextNode;
+    // }
+    //  Swap the head and the tail
+    [this.head, this.tail] = [this.tail, this.head]
+    this.tail.next = null;
+  }
+  //* The toArray function converts the linked list into an array
+  toArray() {
+    //  Initialize an empty array
+    const arr = [];
+    //  Loop through the list, and push the values into the array
+    for(let i = this.head; i !== null; i = i.next) arr.push(i.value);
+    //  Return the array
+    return arr;
+  }
 }
