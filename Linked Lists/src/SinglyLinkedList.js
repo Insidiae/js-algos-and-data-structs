@@ -14,7 +14,7 @@ class SinglyLinkedList {
     this.tail = null;
     this.length = 0;
   }
-  //* The push function accepts a value to be added
+  //* The push method accepts a value to be added
   //* to the tail/end of the list
   push(value) {
     //  Create a new ListNode for the given value
@@ -28,7 +28,7 @@ class SinglyLinkedList {
     //  Increment the length property of the list
     this.length++;
   }
-  //* The pop function removes the item from the tail/end of the list
+  //* The pop method removes the item from the tail/end of the list
   //* It also returns the value of the removed item
   pop() {
     //  If list is empty, return undefined
@@ -51,7 +51,7 @@ class SinglyLinkedList {
     //  Return the value of the removed ListNode
     return value;
   }
-  //* The unshift function accepts a value to be added
+  //* The unshift method accepts a value to be added
   //* to the head/start of the list
   unshift(value) {
     //  Create a new ListNode for the given value
@@ -67,7 +67,7 @@ class SinglyLinkedList {
     //  Increment the length property of the list
     this.length++;
   }
-  //* The shift function removes the item from the head/start of the list
+  //* The shift method removes the item from the head/start of the list
   //* It also returns the value of the removed item
   shift() {
     //  If list is empty, return undefined
@@ -83,7 +83,7 @@ class SinglyLinkedList {
     //  Return the value of the removed ListNode
     return value;
   }
-  //* The get function accepts an index to access a ListNode on the list
+  //* The get method accepts an index to access a ListNode on the list
   //* and returns the ListNode at the specified index
   get(index) {
     //  If index is less than 0 or greater than or equal to the
@@ -95,7 +95,7 @@ class SinglyLinkedList {
     //  Return the ListNode at that index
     return currentNode;
   }
-  //* The set function accepts an index and a value,
+  //* The set method accepts an index and a value,
   //* and sets the specified value on the ListNode
   //* at the specified index
   set(index, value) {
@@ -108,7 +108,7 @@ class SinglyLinkedList {
     currentNode.value = value;
     return true;
   }
-  //* The insert function accepts an index and a value,
+  //* The insert method accepts an index and a value,
   //* and inserts a new ListNode with the specified value
   //* at the specified index
   insert(index, value) {
@@ -139,7 +139,7 @@ class SinglyLinkedList {
     //  Return true
     return true;
   }
-  //* The remove function accepts an index
+  //* The remove method accepts an index
   //* and removes the item at the specified index
   //* It also returns the value of the removed item
   remove(index) {
@@ -167,7 +167,7 @@ class SinglyLinkedList {
     //  Return the value of the removed ListNode
     return value;
   }
-  //* The reverse function reverses the order
+  //* The reverse method reverses the order
   //* of the ListNodes in the linked list
   reverse() {
     //  If list is empty, do nothing
@@ -211,7 +211,7 @@ class SinglyLinkedList {
     [this.head, this.tail] = [this.tail, this.head]
     this.tail.next = null;
   }
-  //* The toArray function converts the linked list into an array
+  //* The toArray method converts the linked list into an array
   toArray() {
     //  Initialize an empty array
     const arr = [];
