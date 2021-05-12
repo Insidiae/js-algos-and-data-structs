@@ -38,7 +38,7 @@ class DoublyLinkedList {
     if (!this.tail) return;
     //  Get the current tail's value
     const value = this.tail.value;
-    //  Point the new tail to its correct position
+    //  Set the new tail into the current tail's prev property
     this.tail = this.tail.prev;
     //  Decrement length property of the list
     this.length--;
@@ -58,7 +58,7 @@ class DoublyLinkedList {
     if (!this.tail) this.tail = newNode;
     //  otherwise, point the previous head to the new DoubleListNode
     else this.head.prev = newNode;
-    // Set the prev property of the new DoubleListNode to the current head, if any
+    // Set the next property of the new DoubleListNode to the current head, if any
     newNode.next = this.head;
     //  Set the head to be the new DoubleListNode
     this.head = newNode;
@@ -70,9 +70,9 @@ class DoublyLinkedList {
   shift() {
     //  If list is empty, return undefined
     if (!this.head) return;
-    //  Get the value on the current head of the list
+    //  Get the current head's value
     const value = this.head.value;
-    //  Set the new head into the current head's next
+    //  Set the new head into the current head's next property
     this.head = this.head.next;
     //  Decrement length property of the list
     this.length--;
