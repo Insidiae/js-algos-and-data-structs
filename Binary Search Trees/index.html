@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 08 - Binary Search Trees</title>
+  </head>
+  <body>
+    <!-- TODO: pretty up this page sometime later 👌 -->
+    <p>
+      Psst: Open the JavaScript Console and try to play around with these
+      functions:
+    </p>
+    <h1>Binary Search Trees</h1>
+    <ul>
+      <li>
+        <code> const bst = new BinarySearchTree() </code>
+      </li>
+      <li>
+        <code>
+          bst.insert(50).insert(30).insert(20).insert(40).insert(70).insert(60).insert(80)
+        </code>
+      </li>
+      <li>
+        <code>
+          bst.breadthFirstSearch() // should return [50, 30, 70, 20, 40, 60, 80]
+        </code>
+      </li>
+      <li>
+        <code>
+          bst.DFSPreOrder() // should return [50, 30, 20, 40, 70, 60, 80]
+        </code>
+      </li>
+      <li>
+        <code>
+          bst.DFSInOrder() // should return [20, 30, 40, 50, 60, 70, 80]
+        </code>
+      </li>
+      <li>
+        <code>
+          bst.DFSPostOrder() // should return [20, 40, 30, 60, 80, 70, 50]
+        </code>
+      </li>
+      <li>
+        <code>
+          bst.find(30) // should return the node with the value of 30
+        </code>
+      </li>
+      <li>
+        <code> bst.remove(20) // removes the node with the value of 20 </code>
+      </li>
+      <li>
+        <code> bst.remove(30) // removes the node with the value of 30 </code>
+      </li>
+      <li>
+        <code> bst.remove(50) // removes the node with the value of 50 </code>
+      </li>
+    </ul>
+
+    <script src="src/binarySearchTree.js"></script>
+  </body>
+</html>
