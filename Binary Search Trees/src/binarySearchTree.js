@@ -119,14 +119,14 @@ class BinarySearchTree {
       //  inorder successor's value...
       //? The inorder successor is the smallest node
       //? from the current node's right subtree
-      currentNode.value = this.minValue(currentNode.right);
+      currentNode.value = this.findInorderSuccessor(currentNode.right);
       //  ...and then remove the inorder successor
       //  from its old position
       return this.remove(currentNode.value, currentNode.right, currentNode);
     }
   }
 
-  minValue(currentNode) {
+  findInorderSuccessor(currentNode) {
     let min = currentNode.value;
     while (currentNode.left !== null) {
       min = currentNode.left.value;
@@ -239,5 +239,83 @@ class BinarySearchTree {
     traversePostOrder(this.root);
     //  Return the values array
     return values;
+  }
+
+  isBalanced() {
+    //  Using recursion, traverse every node
+    //  to check if the three is balanced
+    //* The recursive function returns an array
+    //* containing a bool for if the node is balanced,
+    //* and a number for the height of the node
+    function checkBalanced(currentNode) {
+      //  If current node is empty, it is balanced
+      //  and has a height of -1
+      if (!currentNode) {
+        return [true, -1];
+      }
+      //  Otherwise:
+      //  Make a recursive call for the left subtree
+      const [leftIsBalanced, leftHeight] = checkBalanced(currentNode.left);
+      //  If the left subtree is NOT balanced:
+      if (!leftIsBalanced) {
+        //  Return false for the bool value
+        return [false, leftHeight];
+      }
+      //  Make a recursive call for the right subtree
+      const [rightIsBalanced, rightHeight] = checkBalanced(currentNode.right);
+      //  If the right subtree is NOT balanced:
+      if (!rightIsBalanced) {
+        //  Return false for the bool value
+        return [false, rightHeight];
+      }
+      //  Otherwise, it means both subtrees are balanced
+      //  Now compare the height of each subtree
+      //  The current node is only balanced if the
+      //  absolute difference of the height of both subtrees
+      //  are less than or equal to 1
+      const subtreesAreBalanced = Math.abs(leftHeight - rightHeight) <= 1;
+      //  To calculate the height of the current node,
+      //  simply add 1 to the height of the larger subtree
+      const currentHeight = Math.max(leftHeight, rightHeight) + 1;
+      //  Return the balanced status of the node
+      //  and the height of the current node
+      return [subtreesAreBalanced, currentHeight];
+    }
+
+    //  Invoke the recursive function starting from
+    //  the root, and return the bool value
+    return checkBalanced(this.root)[0];
+  }
+
+  isValidBST() {
+    //  Create a variable to store the previous value
+    let prev = -Infinity;
+    //  Create a variable to keep track of the BST's validity
+    let isValid = true;
+
+    //  Using recursion, iterate over the tree
+    function traverseValidate(currentNode) {
+      //  Make a recursive call for the left node, if any
+      if (currentNode.left) traverseValidate(currentNode.left);
+      //  If current node's value is greater than the previous value:
+      if (currentNode.value > prev) {
+        //  Set the new previous value to be the current node's value
+        prev = currentNode.value;
+      } else {
+        //  Otherwise, the tree is NOT valid
+        isValid = false;
+        //  Also make sure we don't make any more
+        //  unnecessary recursive calls
+        return;
+      }
+      //  If the BST is still valid:
+      //  Make a recursive call for the right node, if any
+      if (isValid && currentNode.right) traverseValidate(currentNode.right);
+    }
+
+    //  Invoke the recursive function
+    traverseValidate(this.root);
+    //  Return the variable we were using to check for validity
+    return isValid;
   }
 }
