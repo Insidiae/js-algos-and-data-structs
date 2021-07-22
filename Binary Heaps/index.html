@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 09 - Binary Heaps</title>
+  </head>
+  <body>
+    <!-- TODO: pretty up this page sometime later 👌 -->
+    <p>
+      Psst: Open the JavaScript Console and try to play around with these
+      functions:
+    </p>
+    <h1>Binary Heaps</h1>
+    <h2>Max Heap</h2>
+    <ul>
+      <li>
+        <code> const maxHeap = new MaxBinaryHeap() </code>
+      </li>
+      <li>
+        <code>
+          maxHeap.insert(41).insert(39).insert(33).insert(18).insert(27).insert(12).insert(55)
+          // should return heap with values [55, 39, 41, 18, 27, 12, 33]
+        </code>
+      </li>
+      <li>
+        <code> maxHeap.extractMax() // should return 55 </code>
+      </li>
+    </ul>
+
+    <h2>Min Heap</h2>
+    <ul>
+      <li>
+        <code> const minHeap = new MinBinaryHeap() </code>
+      </li>
+      <li>
+        <code>
+          minHeap.insert(41).insert(39).insert(33).insert(18).insert(27).insert(12).insert(55)
+          // should return heap with values [12, 27, 18, 41, 33, 39, 55]
+        </code>
+      </li>
+      <li>
+        <code> minHeap.extractMin() // should return 12 </code>
+      </li>
+    </ul>
+
+    <h2>Priority Queue</h2>
+    <ul>
+      <li>
+        <code>
+          const queue = new PriorityQueue() // Uses Min heap, meaning lower
+          priority number gets served first
+        </code>
+      </li>
+      <li>
+        <code>
+          queue.enqueue("Wood Tier", 41).enqueue("Bronze Tier",
+          39).enqueue("Silver Tier", 33).enqueue("Diamond Tier",
+          18).enqueue("Gold Tier", 27).enqueue("Ultra Deluxe VIP",
+          12).enqueue("pleb", 55)
+        </code>
+      </li>
+      <li>
+        <code>queue.dequeue() </code>
+        <br />
+        <em>Should dequeue the following in order:</em>
+        <ol>
+          <li>Ultra Deluxe VIP</li>
+          <li>Diamond Tier</li>
+          <li>Gold Tier</li>
+          <li>Silver Tier</li>
+          <li>Bronze Tier</li>
+          <li>Wood Tier</li>
+          <li>pleb</li>
+        </ol>
+      </li>
+    </ul>
+
+    <script src="src/binaryHeap.js"></script>
+    <script src="src/priorityQueue.js"></script>
+  </body>
+</html>
