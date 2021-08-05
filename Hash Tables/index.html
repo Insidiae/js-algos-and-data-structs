@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 10 - Hash Tables</title>
+  </head>
+  <body>
+    <!-- TODO: pretty up this page sometime later 👌 -->
+    <p>
+      Psst: Open the JavaScript Console and try to play around with these
+      functions:
+    </p>
+    <h1>Hash Tables</h1>
+    <ul>
+      <li>
+        <code> const hashTable = new HashTable(50); </code>
+      </li>
+      <li>
+        <code>
+          hashTable.set("darkblue", "#00008b").set("dupeblue",
+          "#00008b").set("salmon", "#fa8072").set("lightcoral", "#f08080");
+        </code>
+      </li>
+      <li>
+        <code> hashTable.get("darkblue") // should return "#00008b" </code>
+      </li>
+      <li>
+        <code>
+          hashTable.keys() // should return ["darkblue", "dupeblue", "salmon",
+          "lightcoral"]
+        </code>
+      </li>
+      <li>
+        <code>
+          hashTable.values() // should return ["#00008b", "#00008b", "#fa8072",
+          "#f08080"]
+        </code>
+      </li>
+      <li>
+        <code>
+          hashTable.entires() // should return [["darkblue", "#00008b"],
+          ["dupeblue", "#00008b"], ["salmon", "#fa8072"], ["lightcoral",
+          "#f08080"]]
+        </code>
+      </li>
+    </ul>
+
+    <script src="src/hashTable.js"></script>
+  </body>
+</html>
