@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 11 - Graphs</title>
+  </head>
+  <body>
+    <!-- TODO: pretty up this page sometime later 👌 -->
+    <p>
+      Psst: Open the JavaScript Console and try to play around with these
+      functions:
+    </p>
+    <h1>Graphs</h1>
+    <ul>
+      <li>
+        <code> const graph = new Graph(); </code>
+      </li>
+      <li>
+        <code
+          >graph.addVertex("Tokyo").addVertex("Dallas").addVertex("Aspen").addVertex("Los
+          Angeles").addVertex("Hong Kong");
+        </code>
+      </li>
+      <li>
+        <code
+          >graph.addEdge("Tokyo", "Dallas").addEdge("Dallas",
+          "Aspen").addEdge("Hong Kong", "Tokyo").addEdge("Hong Kong",
+          "Dallas").addEdge("Los Angeles", "Hong Kong").addEdge("Los Angeles",
+          "Aspen");
+        </code>
+      </li>
+      <li>
+        <code>graph.removeEdge("Tokyo", "Dallas") </code>
+      </li>
+      <li>
+        <code>graph.removeVertex("Dallas") </code>
+      </li>
+    </ul>
+
+    <script src="src/graph.js"></script>
+  </body>
+</html>
