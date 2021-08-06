@@ -18,24 +18,66 @@
         <code> const graph = new Graph(); </code>
       </li>
       <li>
-        <code
-          >graph.addVertex("Tokyo").addVertex("Dallas").addVertex("Aspen").addVertex("Los
+        <code>
+          graph.addVertex("Tokyo").addVertex("Dallas").addVertex("Aspen").addVertex("Los
           Angeles").addVertex("Hong Kong");
         </code>
       </li>
       <li>
-        <code
-          >graph.addEdge("Tokyo", "Dallas").addEdge("Dallas",
+        <code>
+          graph.addEdge("Tokyo", "Dallas").addEdge("Dallas",
           "Aspen").addEdge("Hong Kong", "Tokyo").addEdge("Hong Kong",
           "Dallas").addEdge("Los Angeles", "Hong Kong").addEdge("Los Angeles",
           "Aspen");
         </code>
       </li>
       <li>
-        <code>graph.removeEdge("Tokyo", "Dallas") </code>
+        <code> graph.removeEdge("Tokyo", "Dallas") </code>
       </li>
       <li>
-        <code>graph.removeVertex("Dallas") </code>
+        <code> graph.removeVertex("Dallas") </code>
+      </li>
+    </ul>
+
+    <h2>Graph Traversal</h2>
+    <ul>
+      <li>
+        <code> const g = new Graph(); </code>
+      </li>
+      <li>
+        <code>
+          g.addVertex("A").addVertex("B").addVertex("C").addVertex("D").addVertex("E").addVertex("F");
+        </code>
+      </li>
+      <li>
+        <code>
+          g.addEdge("A", "B").addEdge("A", "C").addEdge("B", "D").addEdge("C",
+          "E").addEdge("D", "E").addEdge("D", "F").addEdge("E", "F");
+        </code>
+      </li>
+      <li>
+        <code>
+          g.depthFirstSearch("A") // should return ["A", "B", "D", "E", "C",
+          "F"]
+        </code>
+      </li>
+      <li>
+        <code>
+          g.depthFirstSearchIterative("A") // should return ["A", "C", "E", "F",
+          "D", "B"]
+        </code>
+      </li>
+      <li>
+        <code>
+          g.breadthFirstSearch("A") // should return ["A", "B", "C", "D", "E",
+          "F"]
+        </code>
+      </li>
+      <li>
+        <code>
+          g.breadthFirstSearchIterative("A") // should return ["A", "B", "C",
+          "D", "E", "F"]
+        </code>
       </li>
     </ul>
 
