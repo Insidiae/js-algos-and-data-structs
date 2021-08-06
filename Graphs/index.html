@@ -81,6 +81,62 @@
       </li>
     </ul>
 
+    <h2>Weighted Graphs</h2>
+    <ul>
+      <li>
+        <code> const g2 = new WeightedGraph(); </code>
+      </li>
+      <li>
+        <code>
+          g2.addVertex("A").addVertex("B").addVertex("C").addVertex("D").addVertex("E").addVertex("F");
+        </code>
+      </li>
+      <li>
+        <code>
+          g2.addEdge("A", "B", 4).addEdge("A", "C", 2).addEdge("B", "E",
+          3).addEdge("C", "D", 2).addEdge("C", "F", 4).addEdge("D", "E",
+          3).addEdge("D", "F" , 1).addEdge("E", "F" , 1);
+        </code>
+      </li>
+    </ul>
+
+    <h3>Dijkstra's Algorithm</h3>
+    <ul>
+      <li>
+        <code> const g3 = new WeightedGraph(); </code>
+      </li>
+      <li>
+        <code>
+          g3.addVertex("A").addVertex("Z").addVertex("C").addVertex("D").addVertex("E").addVertex("H").addVertex("Q").addVertex("G");
+        </code>
+      </li>
+      <li>
+        <code>
+          g3.addEdge("A", "Z", 7).addEdge("A", "C", 8).addEdge("Z", "Q",
+          2).addEdge("C", "G", 4).addEdge("D", "Q", 8).addEdge("E", "H",
+          1).addEdge("H", "Q" , 3).addEdge("Q", "C" , 6).addEdge("G", "Q" , 9);
+        </code>
+      </li>
+      <li>
+        <code>
+          g3.dijkstra("A", "E") // should return ["A", "Z", "Q", "H", "E"]
+        </code>
+      </li>
+      <li>
+        <code> g3.dijkstra("A", "Q") // should return ["A", "Z", "Q"] </code>
+      </li>
+      <li>
+        <code> g3.dijkstra("A", "G") // should return ["A", "C", "G"] </code>
+      </li>
+      <li>
+        <code>
+          g3.dijkstra("A", "D") // should return ["A", "Z", "Q", "D"]
+        </code>
+      </li>
+    </ul>
+
     <script src="src/graph.js"></script>
+    <script src="src/dijkstra.js"></script>
+    <script src="src/weightedGraph.js"></script>
   </body>
 </html>
