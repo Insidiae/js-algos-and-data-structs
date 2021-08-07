@@ -11,6 +11,8 @@ class BinarySearchTree {
     this.root = null;
   }
 
+  //* The insert method takes a value and adds it
+  //* into its proper place in the Binary Search Tree
   insert(val, currentNode = this.root) {
     //  Starting at the root:
     if (!this.root) {
@@ -50,6 +52,8 @@ class BinarySearchTree {
     return this;
   }
 
+  //* The find method accepts a value
+  //* and returns the node with the matching value, if any
   find(val, currentNode = this.root) {
     //  Check the current node (default is root):
     if (!currentNode) {
@@ -77,6 +81,10 @@ class BinarySearchTree {
     }
   }
 
+  //* The remove method accepts a value,
+  //* removes it from the tree,
+  //* and re-arranges the remaining nodes
+  //* to maintain the integrity of the Binary Search Tree
   remove(val, currentNode = this.root, parentNode = this, direction = "root") {
     //  Return false if the tree is empty
     //  or if the value is not found
@@ -117,8 +125,6 @@ class BinarySearchTree {
       //  If the current node has two children,
       //  Set the current node's value to its
       //  inorder successor's value...
-      //? The inorder successor is the smallest node
-      //? from the current node's right subtree
       currentNode.value = this.findInorderSuccessor(currentNode.right);
       //  ...and then remove the inorder successor
       //  from its old position
@@ -126,6 +132,10 @@ class BinarySearchTree {
     }
   }
 
+  //* This helper method takes a node
+  //* and finds its inorder successor
+  //? The inorder successor is the smallest node
+  //? from the current node's right subtree
   findInorderSuccessor(currentNode) {
     let min = currentNode.value;
     while (currentNode.left !== null) {
