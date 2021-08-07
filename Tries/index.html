@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 13 - Tries</title>
+  </head>
+  <body>
+    <!-- TODO: pretty up this page sometime later 👌 -->
+    <p>
+      Psst: Open the JavaScript Console and try to play around with these
+      functions:
+    </p>
+    <h1>Tries</h1>
+    <ul>
+      <li>
+        <code> const t = new Trie(); </code>
+      </li>
+      <li>
+        <code>
+          t.addWord("fun").addWord("fast").addWord("fat").addWord("fate").addWord("father").addWord("forget").addWord("awesome").addWord("argue");
+        </code>
+      </li>
+      <li>
+        <code>
+          t.getWords() // should return ["fun", "fast", "fat", "fate", "father",
+          "forget", "awesome", "argue"]
+        </code>
+      </li>
+      <li>
+        <code>
+          t.autoComplete("fa") // should return ["fast", "fat", "fate",
+          "father"]
+        </code>
+      </li>
+      <li>
+        <code>
+          t.removeWord("fat") // should remove "fat" from words list
+        </code>
+      </li>
+      <li>
+        <code>
+          t.removeWord("argue") // should remove "argue" from words list
+        </code>
+      </li>
+    </ul>
+
+    <script src="src/trie.js"></script>
+  </body>
+</html>
