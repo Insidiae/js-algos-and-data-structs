@@ -50,7 +50,7 @@ function heapSort(arr) {
   //  Display the initial heap
   console.log("Initial heap:", arr);
 
-  //* Now that e have out first max heap...
+  //* Now that we have our first max heap...
   //  Loop over the heap, starting from the end:
   for (let i = arr.length - 1; i > 0; i--) {
     //  Indicate a new pass
