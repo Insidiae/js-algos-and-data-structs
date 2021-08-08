@@ -49,7 +49,7 @@ class Graph {
   }
 
   removeEdge(vertex1, vertex2) {
-    //  For directed graphs,
+    //  For undirected graphs,
     //  simply remove directed edges going both ways
     this.removeDirectedEdge(vertex1, vertex2).removeDirectedEdge(
       vertex2,
