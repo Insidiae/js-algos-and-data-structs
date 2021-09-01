@@ -16,7 +16,8 @@
 11. [Graphs](./Graphs/)
 12. [Dynamic Programming](Dynamic%20Programming/)
 13. [Tries](./Tries/)
-14. [Misc. Exercises and Coding Challenges](./Extra/)
+14. [FAANG Interview Questions](./FAANG%20Interview%20Questions/)
+15. [Misc. Exercises and Coding Challenges](./Extra/)
 
 ---
 
