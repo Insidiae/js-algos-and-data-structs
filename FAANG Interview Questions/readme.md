@@ -10,3 +10,6 @@ This section contains the solutions to the exercise questions as featured in the
 4. [Backspace String Compare](4.%20Backspace%20String%20Compare.md)
 5. [Longest Substring Without Repeating Characters](5.%20Longest%20Substring%20Without%20Repeating%20Characters.md)
 6. [Valid Palindrome & Almost a Palindrome](6.%20Palindromes.md)
+7. [M, N Reversals](7.%20M,%20N%20Reversals.md)
+8. [Flatten a Multilevel Doubly Linked List](8.%20Flatten%20a%20Multilevel%20Doubly%20Linked%20List.md)
+9. [Cycle Detection](9.%20Cycle%20Detection.md)
