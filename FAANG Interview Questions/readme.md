@@ -16,3 +16,5 @@ This section contains the solutions to the exercise questions as featured in the
 10. [Valid Parentheses](10.%20Valid%20Parentheses.md)
 11. [Minimum Brackets To Remove](11.%20Minimum%20Brackets%20To%20Remove.md)
 12. [Implement Queue Using Stacks](12.%20Implement%20Queue%20Using%20Stacks.md)
+13. [Kth Largest Element](13.%20Kth%20Largest%20Element.md)
+14. [Start And End Of Target In A Sorted Array](14.%20Start%20And%20End%20Of%20Target%20In%20A%20Sorted%20Array.md)
