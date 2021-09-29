@@ -18,3 +18,8 @@ This section contains the solutions to the exercise questions as featured in the
 12. [Implement Queue Using Stacks](12.%20Implement%20Queue%20Using%20Stacks.md)
 13. [Kth Largest Element](13.%20Kth%20Largest%20Element.md)
 14. [Start And End Of Target In A Sorted Array](14.%20Start%20And%20End%20Of%20Target%20In%20A%20Sorted%20Array.md)
+15. [Maximum Depth Of Binary Tree](15.%20Maximum%20Depth%20Of%20Binary%20Tree.md)
+16. [Level Order Of Binary Tree](16.%20Binary%20Tree%20Level%20Order%20Traversal.md)
+17. [Right Side View Of Tree](17.%20Right%20Side%20View%20Of%20Tree.md)
+18. [Number Of Nodes In Complete Tree.md](18.%20Number%20Of%20Nodes%20In%20Complete%20Tree.md)
+19. [Validate Binary Search Tree](19.%20Validate%20Binary%20Search%20Tree.md)
