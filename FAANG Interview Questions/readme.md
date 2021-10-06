@@ -23,3 +23,6 @@ This section contains the solutions to the exercise questions as featured in the
 17. [Right Side View Of Tree](17.%20Right%20Side%20View%20Of%20Tree.md)
 18. [Number Of Nodes In Complete Tree.md](18.%20Number%20Of%20Nodes%20In%20Complete%20Tree.md)
 19. [Validate Binary Search Tree](19.%20Validate%20Binary%20Search%20Tree.md)
+20. [Number Of Islands](20.%20Number%20Of%20Islands.md)
+21. [Rotting Oranges](21.%20Rotting%20Oranges.md)
+22. [Walls And Gates](22.%20Walls%20And%20Gates.md)
