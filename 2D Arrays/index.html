@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 14 - 2D Arrays</title>
+  </head>
+  <body>
+    <!-- TODO: pretty up this page sometime later 👌 -->
+    <p>
+      Psst: Open the JavaScript Console and try to play around with these
+      functions:
+    </p>
+    <h1>2-Dimensional Arrays</h1>
+    <ul>
+      <li>
+        <code> const matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]; </code>
+      </li>
+      <li>
+        <code> matrix[0][0] // returns 1 </code>
+      </li>
+      <li>
+        <code> matrix[0][1] // returns 2 </code>
+      </li>
+      <li>
+        <code> matrix[1][0] // returns 4 </code>
+      </li>
+    </ul>
+
+    <h2>2D Array Traversal</h2>
+    <ul>
+      <li>
+        <pre>
+const grid = [
+  [1, 2, 3, 4, 5],
+  [6, 7, 8, 9, 10],
+  [11, 12, 13, 14, 15],
+  [16, 17, 18, 19, 20],
+  [21, 22, 23, 24, 25],
+];
+        </pre>
+      </li>
+      <li>
+        <pre>
+for (let row of grid) {
+  for (let item of row) {
+    console.log(item);
+  }
+}
+// should log the ff. into the console:
+// 1, 2, 3, 4, 5,
+// 6, 7, 8, 9, 10,
+// 11, 12, 13, 14, 15,
+// 16, 17, 18, 19, 20,
+// 21, 22, 23, 24, 25
+        </pre>
+      </li>
+      <li>
+        <pre>
+depthFirstSearch2D(grid); // start from 1
+// should return:
+// [1, 2, 3, 4, 5,
+//  10, 15, 20, 25, 24,
+//  19, 14, 9, 8, 13,
+//  18, 23, 22, 17, 12,
+//  7, 6, 11, 16, 21]
+        </pre>
+      </li>
+      <li>
+        <pre>
+depthFirstSearch2D(grid, 2, 2); // start from 13
+// should return:
+// [13, 8, 3, 4, 5,
+// 10, 15, 20, 25, 24,
+// 19, 14, 9, 18, 23,
+// 22, 17, 12, 7, 2,
+// 1, 6, 11, 16, 21]
+        </pre>
+      </li>
+      <li>
+        <pre>
+breadthFirstSearch2D(grid); // start from 1
+// should return:
+// [1, 2, 6, 3, 7,
+//  11, 4, 8, 12, 16,
+//  5, 9, 13, 17, 21,
+//  10, 14, 18, 22, 15,
+//  19, 23, 20, 24, 25]
+        </pre>
+      </li>
+      <li>
+        <pre>
+breadthFirstSearch2D(grid, 2, 2); // start from 13
+// should return:
+// [13, 8, 14, 18, 12,
+//  3, 9, 7, 15, 19,
+//  23, 17, 11, 4, 2,
+//  10, 6, 20, 24, 22,
+//  16, 5, 1, 25, 21]
+        </pre>
+      </li>
+    </ul>
+
+    <script src="src/2DTraversal.js"></script>
+  </body>
+</html>
