@@ -26,3 +26,6 @@ This section contains the solutions to the exercise questions as featured in the
 20. [Number Of Islands](20.%20Number%20Of%20Islands.md)
 21. [Rotting Oranges](21.%20Rotting%20Oranges.md)
 22. [Walls And Gates](22.%20Walls%20And%20Gates.md)
+23. [Time Needed To Inform All Employees](23.%20Time%20Needed%20To%20Inform%20All%20Employees.md)
+24. [Course Scheduler](24.%20Course%20Scheduler.md)
+25. [Network Time Delay](25.%20Network%20Time%20Delay.md)
