@@ -135,6 +135,76 @@
       </li>
     </ul>
 
+    <h3>Bellman-Ford Algorithm</h3>
+    <ul>
+      <li>
+        <code>
+          g3.bellmanFord("A", "E") // should return ["A", "Z", "Q", "H", "E"]
+        </code>
+      </li>
+      <li>
+        <code> g3.bellmanFord("A", "Q") // should return ["A", "Z", "Q"] </code>
+      </li>
+      <li>
+        <code> g3.bellmanFord("A", "G") // should return ["A", "C", "G"] </code>
+      </li>
+      <li>
+        <code>
+          g3.bellmanFord("A", "D") // should return ["A", "Z", "Q", "D"]
+        </code>
+      </li>
+    </ul>
+
+    <h4>No negative cycle:</h4>
+    <ul>
+      <li>
+        <code> const g4 = new WeightedGraph(); </code>
+      </li>
+      <li>
+        <code>
+          g4.addVertex("A") .addVertex("B") .addVertex("C") .addVertex("D")
+          .addVertex("E");
+        </code>
+      </li>
+      <li>
+        <code>
+          g4.addDirectedEdge("A", "B", 9) .addDirectedEdge("A", "D", 2)
+          .addDirectedEdge("B", "E", -3) .addDirectedEdge("C", "A", 5)
+          .addDirectedEdge("C", "B", 3) .addDirectedEdge("D", "B", -4)
+          .addDirectedEdge("D", "E", 6) .addDirectedEdge("E", "C", 7);
+        </code>
+      </li>
+      <li>
+        <code>
+          g4.bellmanFord("A", "C") // should return ["A", "D", "B", "E", "C"]
+        </code>
+      </li>
+    </ul>
+
+    <h4>With negative cycle:</h4>
+    <ul>
+      <li>
+        <code> const g5 = new WeightedGraph(); </code>
+      </li>
+      <li>
+        <code>
+          g5.addVertex("A") .addVertex("B") .addVertex("C") .addVertex("D")
+          .addVertex("E");
+        </code>
+      </li>
+      <li>
+        <code>
+          g5.addDirectedEdge("A", "B", 9) .addDirectedEdge("A", "D", 2)
+          .addDirectedEdge("B", "E", -3) .addDirectedEdge("C", "A", -5)
+          .addDirectedEdge("C", "B", 3) .addDirectedEdge("D", "B", -4)
+          .addDirectedEdge("D", "E", 6) .addDirectedEdge("E", "C", 7);
+        </code>
+      </li>
+      <li>
+        <code> g5.bellmanFord("A", "C") // Error: Negative cycle exists! </code>
+      </li>
+    </ul>
+
     <script src="src/graph.js"></script>
     <script src="src/dijkstra.js"></script>
     <script src="src/weightedGraph.js"></script>
