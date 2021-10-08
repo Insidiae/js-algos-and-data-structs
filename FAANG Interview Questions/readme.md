@@ -29,3 +29,5 @@ This section contains the solutions to the exercise questions as featured in the
 23. [Time Needed To Inform All Employees](23.%20Time%20Needed%20To%20Inform%20All%20Employees.md)
 24. [Course Scheduler](24.%20Course%20Scheduler.md)
 25. [Network Time Delay](25.%20Network%20Time%20Delay.md)
+26. [Minimum Cost Of Climbing Stairs](26.%20Minimum%20Cost%20Of%20Climbing%20Stairs.md)
+27. [Knight Probability In Chessboard](27.%20Knight%20Probability%20In%20Chessboard.md)
