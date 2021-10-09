@@ -31,3 +31,6 @@ This section contains the solutions to the exercise questions as featured in the
 25. [Network Time Delay](25.%20Network%20Time%20Delay.md)
 26. [Minimum Cost Of Climbing Stairs](26.%20Minimum%20Cost%20Of%20Climbing%20Stairs.md)
 27. [Knight Probability In Chessboard](27.%20Knight%20Probability%20In%20Chessboard.md)
+28. [Sudoku Solver](28.%20Sudoku%20Solver.md)
+29. [Monarchy](29.%20Monarchy.md)
+30. [Implement Prefix Trie](30.%20Implement%20Prefix%20Trie.md)
