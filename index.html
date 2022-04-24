@@ -114,10 +114,10 @@
           </a>
         </li>
         <li class="list-group-item d-flex align-items-baseline">
-          <a href="#2D_Arrays" class="nav-link"> 2D Arrays </a>
+          <a href="#Tries" class="nav-link"> Tries </a>
         </li>
         <li class="list-group-item d-flex align-items-baseline">
-          <a href="#Tries" class="nav-link"> Tries </a>
+          <a href="#2D_Arrays" class="nav-link"> 2D Arrays </a>
         </li>
         <li class="list-group-item d-flex align-items-baseline">
           <a href="#Extras" class="nav-link"> Extras </a>
@@ -292,12 +292,47 @@
           <a href="Linked Lists/index.html"> Live Demo (WIP) </a>
         </em>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-          voluptates incidunt quis cumque earum libero esse laudantium expedita,
-          ea eum. Dolores ipsum perspiciatis illo error facilis! Quae labore
-          repellendus illo.
+        <p class="mt-3">
+          A <strong>linked list</strong> is a linear collection of data elements
+          whose order is not given by their physical placement in memory.
+          Instead, each element points to the next. It is a data structure
+          consisting of a collection of nodes which together represent a
+          sequence. In its most basic form, each node contains: data, and a
+          reference (in other words, a link) to the next node in the sequence.
+          This structure allows for efficient insertion or removal of elements
+          from any position in the sequence during iteration. More complex
+          variants add additional links, allowing more efficient insertion or
+          removal of nodes at arbitrary positions.
         </p>
+
+        <h3>Types of Linked Lists</h3>
+        <ul>
+          <li>
+            <p>
+              <strong>Singly Linked List</strong> - In a Singly Linked List,
+              each node only contains a data field and a 'next' field, which
+              points to the next node in line of nodes.
+              <img
+                class="img-fluid"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/1280px-Singly-linked-list.svg.png"
+                alt="A singly linked list whose nodes contain two fields: an integer value and a link to the next node"
+              />
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Doubly Linked List</strong> - In a Doubly Linked List,
+              each node contains a data field, a 'next' field, which points to
+              the next node in line of nodes, and a 'prev' field, which points
+              to the previous node in line of nodes.
+            </p>
+            <img
+              class="img-fluid"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Doubly-linked-list.svg/1280px-Doubly-linked-list.svg.png"
+              alt="A doubly linked list whose nodes contain three fields: an integer value, the link forward to the next node, and the link backward to the previous node"
+            />
+          </li>
+        </ul>
       </section>
 
       <section id="Stacks_and_Queues" class="main-section">
@@ -309,10 +344,91 @@
           <a href="Stacks and Queues/index.html"> Live Demo (WIP) </a>
         </em>
 
+        <h3 class="mt-3">Stacks</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-          dolor deserunt minus ipsa fuga et eaque repellat eius unde aliquam,
-          quas consequuntur omnis. Quae ex quasi est, itaque vel ipsum.
+          A <strong>Stack</strong> is an abstract data type that serves as a
+          collection of elements, with two main principal operations:
+        </p>
+        <ul>
+          <li>
+            <code>push()</code>, which adds an element to the collection, and
+          </li>
+          <li>
+            <code>pop()</code>, which removes the most recently added element
+            that was not yet removed.
+          </li>
+        </ul>
+        <img
+          class="img-fluid"
+          src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Lifo_stack.png"
+          alt="Simple representation of a stack runtime with push and pop operations."
+        />
+        <p>
+          Considered as a linear data structure, or more abstractly a sequential
+          collection, the <code>push()</code> and <code>pop()</code> operations
+          occur only at one end of the structure, referred to as the top of the
+          stack. The order in which elements come off a stack gives rise to its
+          alternative name, <strong>LIFO (last in, first out)</strong>. The name
+          "stack" for this type of structure comes from the analogy to a set of
+          physical items stacked on top of each other.
+        </p>
+        <p>
+          In JavaScript,
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Arrays</a
+          >
+          already have the <code>push()</code> and <code>pop()</code> methods
+          that are essential for implementing stacks, so you can just use those
+          methods as-is, and you can easily create a new stack by simply
+          creating a new Array and treating it as a Stack.
+        </p>
+
+        <h3>Queues</h3>
+        <p>
+          A <strong>Queue</strong> is a collection of entities that are
+          maintained in a sequence and can be modified by the addition of
+          entities at one end of the sequence and the removal of entities from
+          the other end of the sequence. By convention, the end of the sequence
+          at which elements are added is called the back, tail, or rear of the
+          queue, and the end at which elements are removed is called the head or
+          front of the queue.
+        </p>
+        <p>Similar to Stacks, Queues also have two main operations:</p>
+        <ul>
+          <li>
+            The operation of adding an element to the rear of the queue is known
+            as <code>enqueue()</code>, and
+          </li>
+          <li>
+            The operation of removing an element from the front is known as
+            <code>dequeue()</code>.
+          </li>
+        </ul>
+        <img
+          class="img-fluid"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Data_Queue.svg/1280px-Data_Queue.svg.png"
+          alt="Representation of a FIFO (first in, first out) queue"
+        />
+        <p>
+          A Queue is also called a
+          <strong>first-in-first-out (FIFO)</strong> data structure. In a FIFO
+          data structure, the first element added to the queue will be the first
+          one to be removed. This is equivalent to the requirement that once a
+          new element is added, all elements that were added before have to be
+          removed before the new element can be removed. This is analogous to
+          the words used when people line up to wait for goods or services.
+        </p>
+        <p>
+          In JavaScript, Arrays already have the <code>push()</code> and
+          <code>shift()</code> methods that are analogous to the
+          <code>enqueue()</code> and <code>dequeue()</code> methods essential
+          for implementing queues, so you can just use those methods as-is, and
+          you can easily create a new queue by simply creating a new Array and
+          treating it as a Queue.
         </p>
       </section>
 
@@ -325,11 +441,14 @@
           <a href="Binary Search Trees/index.html"> Live Demo (WIP) </a>
         </em>
 
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae
-          distinctio impedit cum, quo nulla cumque aliquid odit. Autem placeat
-          molestias quaerat aperiam debitis magni hic consequuntur, vero sequi?
-          Nihil, similique?
+        <p class="mt-3">
+          A <strong>Binary Search Tree (BST)</strong> is a type of
+          <em>Binary Tree</em>, whose internal nodes each store a value, and
+          each has two distinguished sub-trees, commonly denoted left and right.
+          A BST additionally satisfies the binary search property: The value in
+          each node is greater than or equal to any value stored in the left
+          sub-tree, and less than or equal to any value stored in the right
+          sub-tree.
         </p>
 
         <h3>Example</h3>
@@ -356,6 +475,78 @@ bst
             70 --> 60
             70 --> 80
         </pre>
+
+        <h3>Traversal/Searching Binary Search Trees</h3>
+        <p>
+          Binary Search Trees (and Binary Trees in general) can be traversed by
+          visiting each node. There are two common ways for traversal:
+        </p>
+        <ul>
+          <li>
+            <p class="my-0">
+              <strong>Breadth-First Search (BFS)</strong> - BFS starts at the
+              tree root and explores all nodes at the present depth prior to
+              moving on to the nodes at the next depth level. Extra memory,
+              usually a queue, is needed to keep track of the child nodes that
+              were encountered but not yet explored.
+            </p>
+
+            <pre class="my-0">
+              <code class="language-js">bst.breadthFirstSearch() // should return [50, 30, 70, 20, 40, 60, 80]</code>
+            </pre>
+          </li>
+          <li>
+            <p>
+              <strong>Depth First Search (DFS)</strong> - DFS starts at the root
+              node and explores as far as possible along each branch before
+              backtracking.
+            </p>
+            <p>
+              In the case of Binary Trees, DFS can be ordered in one of three
+              ways:
+            </p>
+
+            <ul>
+              <li>
+                <p class="my-0">
+                  <strong>Pre-Order Traversal</strong> - Accesses/visits the
+                  current node first, and then traversing the left and right
+                  sub-trees respectively. Pre-Order Traversal is topologically
+                  sorted, because a parent node is processed before any of its
+                  child nodes is done.
+                </p>
+
+                <pre class="my-0">
+                  <code class="language-js">bst.DFSPreOrder() // should return [50, 30, 20, 40, 70, 60, 80]</code>
+                </pre>
+              </li>
+              <li>
+                <p class="my-0">
+                  <strong>In-Order Traversal </strong> - Traverses the left
+                  sub-tree first, then accesses the current node before finally
+                  traversing the right sub-tree. For Binary Search Trees,
+                  In-Order Traversal retrieves the values in ascending sorted
+                  order.
+                </p>
+
+                <pre class="my-0">
+                  <code class="language-js">bst.DFSInOrder() // should return [20, 30, 40, 50, 60, 70, 80]</code>
+                </pre>
+              </li>
+              <li>
+                <p class="my-0">
+                  <strong>Post-Order Traversal</strong> - Traverses the left and
+                  right sub-trees first before finally accessing the current
+                  node.
+                </p>
+
+                <pre class="my-0">
+                  <code class="language-js">bst.DFSPostOrder() // should return [20, 40, 30, 60, 80, 70, 50]</code>
+                </pre>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </section>
 
       <section id="Binary_Heaps" class="main-section">
@@ -367,11 +558,30 @@ bst
           <a href="Binary Heaps/index.html"> Live Demo (WIP) </a>
         </em>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam hic ipsa
-          maxime possimus vel atque. Eos aliquid deleniti excepturi dolorum quo
-          nihil dolores? Debitis totam, nihil mollitia quod ex impedit!
+        <p class="mt-3">
+          A <strong>Binary Heap</strong> is a heap data structure that takes the
+          form of a binary tree. Binary heaps are a common way of implementing
+          priority queues. The Binary Heap was introduced by J. W. J. Williams
+          in 1964, as a data structure for Heapsort.
         </p>
+        <p>
+          A Binary Heap is defined as a Binary Tree with two additional
+          constraints:
+        </p>
+        <ul>
+          <li>
+            <strong>Shape property</strong>: A Binary Heap is a complete Binary
+            Tree; that is, all levels of the tree, except possibly the last one
+            (deepest) are fully filled, and, if the last level of the tree is
+            not complete, the nodes of that level are filled from left to right.
+          </li>
+          <li>
+            <strong>Heap property</strong>: The value stored in each node is
+            either greater than or equal to (max-heap) or less than or equal to
+            (min-heap) the values in the node's children, according to some
+            total order.
+          </li>
+        </ul>
 
         <h3>Example</h3>
         <p>Imagine a Binary Heap with the ff. elements:</p>
@@ -407,6 +617,33 @@ bst
             18 --> 39
             18 --> 55
         </pre>
+
+        <h3>Heapsort</h3>
+        <p>
+          <em>Heapsort</em> is a comparison-based sorting algorithm. Heapsort
+          can be thought of as an improved selection sort: like selection sort,
+          heapsort divides its input into a sorted and an unsorted region, and
+          it iteratively shrinks the unsorted region by extracting the largest
+          element from it and inserting it into the sorted region. Unlike
+          selection sort, heapsort does not waste time with a linear-time scan
+          of the unsorted region; rather, heap sort maintains the unsorted
+          region in a heap data structure to more quickly find the largest
+          element in each step.
+        </p>
+
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Sorting_heapsort_anim.gif"
+          alt="An animation of Heapsort in action"
+        />
+
+        <p>
+          The Heapsort algorithm involves preparing the list by first turning it
+          into a max heap. The algorithm then repeatedly swaps the first value
+          of the list with the last value, decreasing the range of values
+          considered in the heap operation by one, and sifting the new first
+          value into its position in the heap. This repeats until the range of
+          considered values is one value in length.
+        </p>
       </section>
 
       <section id="Hash_Tables" class="main-section">
@@ -418,11 +655,53 @@ bst
           <a href="Hash Tables/index.html"> Live Demo (WIP) </a>
         </em>
 
+        <p class="mt-3">
+          A Hash Table is a data structure that implements an associative array
+          abstract data type, a structure that can map keys to values. A hash
+          table uses a hash function to compute an index, also called a hash
+          code, into an array of buckets or slots, from which the desired value
+          can be found. During lookup, the key is hashed and the resulting hash
+          indicates where the corresponding value is stored.
+        </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa omnis
-          ullam exercitationem doloremque quaerat, voluptate, qui repellat
-          incidunt dolor veniam at est ab inventore nesciunt quia, temporibus
-          explicabo nam. Praesentium!
+          Ideally, the hash function will assign each key to a unique bucket,
+          but most hash table designs employ an imperfect hash function, which
+          might cause hash collisions where the hash function generates the same
+          index for more than one key. Such collisions are typically
+          accommodated in some way.
+        </p>
+        <p>
+          In a well-dimensioned hash table, the average cost (number of
+          instructions) for each lookup is independent of the number of elements
+          stored in the table. Many hash table designs also allow arbitrary
+          insertions and deletions of key–value pairs, at (amortized) constant
+          average cost per operation.
+        </p>
+        <img
+          class="img-fluid"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Hash_table_3_1_1_0_1_0_0_SP.svg/1280px-Hash_table_3_1_1_0_1_0_0_SP.svg.png"
+          alt="Example of a Hash Table: A small phone book represented as a hash table"
+        />
+        <p>
+          Hash tables already exist by default in JavaScript in the form of
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Objects
+          </a>
+          or
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Maps </a
+          >. However, we can also try
+          <a href="Hash Tables/index.html">
+            implementing our own Hash Table from scratch </a
+          >!
         </p>
       </section>
 
@@ -435,11 +714,54 @@ bst
           <a href="Graphs/index.html"> Live Demo (WIP) </a>
         </em>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, animi
-          totam aperiam quidem facilis id quia ipsa magni, tempore repellat est
-          recusandae sint in iure et autem veritatis minima! Veritatis?
+        <p class="mt-3">
+          A <strong>Graph</strong> is an abstract data type that is meant to
+          implement the undirected graph and directed graph concepts from the
+          field of graph theory within mathematics.
         </p>
+
+        <p>
+          A graph data structure consists of a finite (and possibly mutable) set
+          of <em>vertices</em> (also called nodes or points), together with a
+          set of pairs connecting these vertices called <em>edges</em> (also
+          called links or lines).
+        </p>
+
+        <p>
+          Graphs are used to solve many real-life problems. Graphs are used to
+          represent networks. The networks may include paths in a city or
+          telephone network or circuit network. Graphs are also used in social
+          networks where each person is represented with a vertex(or node). Each
+          node is a structure and contains information like person id, name,
+          gender, locale etc.
+        </p>
+
+        <h3>Representing a Graph</h3>
+        <p>A graph can be represented in three ways:</p>
+
+        <ul>
+          <li>
+            <strong>Adjacency List</strong> - Vertices are stored as records or
+            objects, and every vertex stores a list of adjacent vertices. This
+            data structure allows the storage of additional data on the
+            vertices. Additional data can be stored if edges are also stored as
+            objects, in which case each vertex stores its incident edges and
+            each edge stores its incident vertices.
+          </li>
+          <li>
+            <strong>Adjacency Matrix</strong> - A two-dimensional matrix, in
+            which the rows represent source vertices and columns represent
+            destination vertices. Data on edges and vertices must be stored
+            externally. Only the cost for one edge can be stored between each
+            pair of vertices.
+          </li>
+          <li>
+            <strong>Incidence Matrix</strong> - A two-dimensional matrix, in
+            which the rows represent the vertices and columns represent the
+            edges. The entries indicate the incidence relation between the
+            vertex at a row and edge at a column.
+          </li>
+        </ul>
 
         <h3>Example</h3>
         <pre>
@@ -471,6 +793,30 @@ g.addEdge("A", "B")
             E --- F
             D --- F
         </pre>
+
+        <h3>Graph Traversal</h3>
+        <p>
+          Graph Traversal (also known as graph search) refers to the process of
+          visiting (checking and/or updating) each vertex in a graph. Such
+          traversals are classified by the order in which the vertices are
+          visited. Tree traversal is a special case of graph traversal.
+        </p>
+        <p>Graphs can be traversed in different ways:</p>
+        <ul>
+          <li>
+            <strong>Depth-First Search (DFS)</strong> - DFS visits the child
+            vertices before visiting the sibling vertices; that is, it traverses
+            the depth of any particular path before exploring its breadth. A
+            stack (often the program's call stack via recursion) is generally
+            used when implementing the algorithm.
+          </li>
+          <li>
+            <strong>Breadth-First Search (BFS)</strong> - BFS visits the sibling
+            vertices before visiting the child vertices, and a queue is used in
+            the search process. This algorithm is often used to find the
+            shortest path from one vertex to another.
+          </li>
+        </ul>
       </section>
 
       <section id="Dynamic_Programming" class="main-section">
@@ -482,29 +828,143 @@ g.addEdge("A", "B")
           <a href="Dynamic Programming/index.html"> Live Demo (WIP) </a>
         </em>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
-          magnam, aspernatur voluptas architecto omnis quibusdam ad nostrum
-          deserunt error voluptate accusamus, et hic ducimus repellendus
-          blanditiis, a amet autem aliquam!
+        <p class="mt-3">
+          <strong>Dynamic Programming</strong> is both a mathematical
+          optimization method and a computer programming method. The method was
+          developed by Richard Bellman in the 1950s and has found applications
+          in numerous fields, from aerospace engineering to economics. It refers
+          to simplifying a complicated problem by breaking it down into simpler
+          sub-problems in a recursive manner. While some decision problems
+          cannot be taken apart this way, decisions that span several points in
+          time do often break apart recursively.
         </p>
-      </section>
-
-      <section id="2D_Arrays" class="main-section">
-        <header>
-          <h2>2D Arrays</h2>
-        </header>
-
-        <em>
-          <a href="2D Arrays/index.html"> Live Demo (WIP) </a>
-        </em>
-
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere eum
-          id perspiciatis? Saepe labore earum, sit quos quis porro sapiente rem
-          totam ducimus ab, temporibus cupiditate suscipit maiores libero
-          voluptate!
+          There are two key attributes that a problem must have in order for
+          dynamic programming to be applicable:
         </p>
+        <ul>
+          <li>
+            <strong>Optimal Substructure</strong> - means that the solution to a
+            given optimization problem can be obtained by the combination of
+            optimal solutions to its sub-problems. Such optimal substructures
+            are usually described by means of recursion. A problem is said to
+            have optimal substructure if an optimal solution can be constructed
+            from optimal solutions of its subproblems. This property is used to
+            determine the usefulness of dynamic programming and greedy
+            algorithms for a problem.
+          </li>
+          <li>
+            <strong>Overlapping Subproblems</strong> - means that the space of
+            sub-problems must be small, that is, any recursive algorithm solving
+            the problem should solve the same sub-problems over and over, rather
+            than generating new sub-problems. A problem is said to have
+            overlapping subproblems if the problem can be broken down into
+            subproblems which are reused several times or a recursive algorithm
+            for the problem solves the same subproblem over and over rather than
+            always generating new subproblems.
+          </li>
+        </ul>
+
+        <h3>Example: Fibonacci</h3>
+        <p>
+          Consider our previous code for the Fibonacci series back in the
+          <a href="#Recursion">Recursion</a>
+          section:
+        </p>
+        <pre>
+          <code class="language-js">function fib(num){
+  if(num <= 2) return 1;
+  return fib(num - 1) + fib(num - 2);
+}</code>
+        </pre>
+        <p>
+          Even though the total number of sub-problems is actually small (only
+          43 of them), we end up solving the same problems over and over if we
+          adopt a naive recursive solution such as this:
+        </p>
+        <img
+          class="img-fluid"
+          src="https://i.stack.imgur.com/kgXDS.png"
+          alt="Illustration of how the recursive calls for the recursive Fibonacci solution grows over larger inputs"
+        />
+        <p class="mb-4">
+          Dynamic programming takes account of this fact and solves each
+          sub-problem only once. This can be achieved in either of two ways:
+        </p>
+
+        <h4>Memoization (Top-Down Approach)</h4>
+        <p>
+          This is the direct fall-out of the recursive formulation of any
+          problem. If the solution to any problem can be formulated recursively
+          using the solution to its sub-problems, and if its sub-problems are
+          overlapping, then one can easily memoize or store the solutions to the
+          sub-problems in a table. Whenever we attempt to solve a new
+          sub-problem, we first check the table to see if it is already solved.
+          If a solution has been recorded, we can use it directly, otherwise we
+          solve the sub-problem and add its solution to the table.
+        </p>
+        <pre>
+          <code class="language-js">function memoizedFibHOF() {
+  //  Create a cache variable to store previous results
+  const cache = {};
+
+  return function fib(num) {
+    //  If the number we're looking for is already in the cache:
+    if (num in cache) {
+      //  Simply return the cached result
+      return cache[num];
+    }
+
+    //  Otherwise, just calculate the result like usual
+    if (num <= 2) {
+      return num;
+    }
+
+    //  Don't forget to store new results in the cache!
+    cache[num] = fib(num - 1) + fib(num - 2);
+    return cache[num];
+  };
+}
+
+const memoizedFib = memoizedFibHOF();</code>
+        </pre>
+
+        <h4>Tabulation (Bottom-Up Approach)</h4>
+        <p>
+          Once we formulate the solution to a problem recursively as in terms of
+          its sub-problems, we can try reformulating the problem in a bottom-up
+          fashion: try solving the sub-problems first and use their solutions to
+          build-on and arrive at solutions to bigger sub-problems. This is also
+          usually done in a tabular form by iteratively generating solutions to
+          bigger and bigger sub-problems by using the solutions to small
+          sub-problems. For example, if we already know the values of
+          <code>fib(41)</code> and <code>fib(40)</code>, we can directly
+          calculate the value of <code>fib(42)</code>:
+        </p>
+        <pre>
+          <code class="language-js">function tabulatedFibHOF() {
+  //  Create a cache variable to store previous results
+  const cache = [0, 1, 1];
+
+  return function fib(num) {
+    //  If the number we're looking for is already in the cache:
+    if (num in cache) {
+      //  Simply return the cached result
+      return cache[num];
+    }
+
+    //  Otherwise, calculate next values
+    //  based on previously cached results
+    for (let i = cache.length; i < num; i++) {
+      cache.push(cache[i - 1] + cache[i - 2]);
+    }
+
+    return cache[cache.length - 1];
+  };
+}
+
+const tabulatedFib = tabulatedFibHOF();</code>
+        </pre>
       </section>
 
       <section id="Tries" class="main-section">
@@ -516,12 +976,147 @@ g.addEdge("A", "B")
           <a href="Tries/index.html"> Live Demo (WIP) </a>
         </em>
 
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit
-          placeat accusamus odit exercitationem! In, nemo tempore. Rerum,
-          explicabo facilis iure minima accusantium sit corporis voluptate atque
-          dolorum corrupti perspiciatis maxime?
+        <p class="mt-3">
+          A <strong>Trie</strong>, also called <em>digital tree</em> or
+          <em>prefix tree</em>, is a type of search tree, a tree data structure
+          used for locating specific keys from within a set. These keys are most
+          often strings, with links between nodes defined not by the entire key,
+          but by individual characters. In order to access a key (to recover its
+          value, change it, or remove it), the trie is traversed depth-first,
+          following the links between nodes, which represent each character in
+          the key.
         </p>
+        <p>
+          Common applications of tries include storing a predictive text or
+          autocomplete dictionary and implementing approximate matching
+          algorithms, such as those used in spell checking and hyphenation
+          software. Such applications take advantage of a trie's ability to
+          quickly search for, insert, and delete entries.
+        </p>
+
+        <h3>Example</h3>
+        <pre>
+          <code class="language-js">const trie = new Trie();
+
+trie
+  .addWord("to")
+  .addWord("tea")
+  .addWord("ted")
+  .addWord("ten")
+  .addWord("A")
+  .addWord("in")
+  .addWord("inn");</code>
+        </pre>
+        <pre class="mermaid">
+          graph TD
+            1((<span></span>))
+            t((t))
+            A((A))
+            i((i))
+            to((to))
+            te((te))
+            in((in))
+            tea((tea))
+            ted((ted))
+            ten((ten))
+            inn((inn))
+
+            classDef noWord stroke-dasharray: 5 5
+            class i,t,te noWord
+
+            1 -- t --> t
+            1 -- A --> A
+            1 -- i --> i
+            t -- o --> to
+            t -- e --> te
+            i -- n --> in
+            te -- a --> tea
+            te -- d --> ted
+            te -- n --> ten
+            in -- n --> inn
+        </pre>
+      </section>
+
+      <section id="2D_Arrays" class="main-section">
+        <header>
+          <h2>2D Arrays</h2>
+        </header>
+
+        <em>
+          <a href="2D Arrays/index.html"> Live Demo (WIP) </a>
+        </em>
+
+        <p class="mt-3">
+          The simplest form of a <em>multidimensional array</em> is a
+          <strong>2-dimensional array</strong>, also known as a <em>matrix</em>.
+          A 2-dimensional array can be represented as an array where each
+          element is also an array.
+        </p>
+
+        <img
+          class="img-fluid mb-3"
+          src="https://media.geeksforgeeks.org/wp-content/uploads/two-d.png"
+          alt="Illustration of a 2-dimensional array with 3 rows and 3 columns"
+        />
+
+        <h3>Traversing 2D Arrays</h3>
+        <p>
+          Much like graphs, there are also other advanced algorithms to traverse
+          through a 2-dimensional array, such as
+          <em>Breadth-first Search</em> and <em>Depth-first Search</em>.
+        </p>
+        <p>Consider the following 2D Array:</p>
+        <pre>
+          <code class="language-js">const grid = [
+  [1,  2,  3,  4,  5],
+  [6,  7,  8,  9,  10],
+  [11, 12, 13, 14, 15],
+  [16, 17, 18, 19, 20],
+  [21, 22, 23, 24, 25],
+];</code>
+        </pre>
+
+        <h4>Depth-first Search</h4>
+        <p>
+          Representing a 2-dimensional array as a grid, we can see that we have
+          four directions to choose from to traverse to an adjacent element.
+          With Depth-first Search, we prioritize going as far as possible in one
+          direction before going another direction.
+        </p>
+        <p>
+          For this example, we prioritize going
+          <strong>up, right, down, left</strong>, in that order:
+        </p>
+        <pre>
+          <code class="language-js">depthFirstSearch2D(grid); // start from 1
+// should return:
+// [1,  2,  3,  4,  5,
+//  10, 15, 20, 25, 24,
+//  19, 14, 9,  8,  13,
+//  18, 23, 22, 17, 12,
+//  7,  6,  11, 16, 21]</code>
+        </pre>
+
+        <h4>Breadth-first Search</h4>
+        <p>
+          With Breadth-first Search, we prioritize visiting every element
+          adjacent to the current item in one direction before going to another
+          item. This means we are traversing outward in a ring-like pattern from
+          the starting item.
+        </p>
+        <p>
+          For this example, we prioritize going
+          <strong>up, right, down, left</strong>, in that order:
+        </p>
+        <pre>
+          <code class="language-js">breadthFirstSearch2D(grid); // start from 1
+// should return:
+// [1,  2,  6,  3,  7,
+//  11, 4,  8,  12, 16,
+//  5,  9,  13, 17, 21,
+//  10, 14, 18, 22, 15,
+//  19, 23, 20, 24, 25]</code>
+        </pre>
       </section>
 
       <section id="Extras" class="main-section">
@@ -529,21 +1124,336 @@ g.addEdge("A", "B")
           <h2>Extras</h2>
         </header>
 
+        <h3>
+          <a
+            href="https://github.com/Insidiae/js-algos-and-data-structs/tree/main/FAANG%20Interview%20Questions"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            FAANG Interview Questions
+          </a>
+        </h3>
+
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facilis
-          autem incidunt dolorum explicabo. Deleniti soluta laboriosam fugit
-          nulla impedit, illum reiciendis eligendi nemo voluptatem at quia, modi
-          dolorum praesentium.
+          My notes + solution code to the exercise questions as featured in the
+          <a
+            href="https://academy.zerotomastery.io/p/master-the-coding-interview-faang-interview-prep"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ZTM FAANG Interview Course</a
+          >.
         </p>
 
-        <ul>
+        <ol>
           <li>
             <a
-              href="https://github.com/Insidiae/js-algos-and-data-structs/tree/main/FAANG%20Interview%20Questions"
-              >FAANG Interview Questions</a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/1.%20Two%20Sum.md"
+              target="_blank"
+              rel="noopener noreferrer"
             >
+              Arrays - Two Sum
+            </a>
           </li>
-        </ul>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/2.%20Container%20With%20Most%20Water.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Arrays - Container With Most Water
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/3.%20Trapping%20Rain%20Water.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Arrays - Trapping Rain Water
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/4.%20Backspace%20String%20Compare.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Strings - Backspace String Compare
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/5.%20Longest%20Substring%20Without%20Repeating%20Characters.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Strings - Longest Substring Without Repeating Characters
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/6.%20Palindromes.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Strings - Valid Palindrome & Almost a Palindrome
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/7.%20M,%20N%20Reversals.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Linked Lists - M, N Reversals
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/8.%20Flatten%20a%20Multilevel%20Doubly%20Linked%20List.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Linked Lists - Flatten a Multilevel Doubly Linked List
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/9.%20Cycle%20Detection.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Linked Lists - Cycle Detection
+            </a>
+
+            <ul>
+              <li>
+                Featuring
+                <a
+                  href="https://en.wikipedia.org/wiki/Cycle_detection#Floyd's_tortoise_and_hare"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Floyd's Tortoise And Hare Algorithm
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/10.%20Valid%20Parentheses.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Stacks - Valid Parentheses
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/11.%20Minimum%20Brackets%20To%20Remove.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Stacks - Minimum Brackets To Remove
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/12.%20Implement%20Queue%20Using%20Stacks.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Queues - Implement Queue Using Stacks
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/13.%20Kth%20Largest%20Element.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Recursion - Kth Largest Element
+            </a>
+
+            <ul>
+              <li>
+                Featuring
+                <a
+                  href="https://en.wikipedia.org/wiki/Quickselect"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Hoare's Quickselect Algorithm
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/14.%20Start%20And%20End%20Of%20Target%20In%20A%20Sorted%20Array.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Recursion - Start And End Of Target In A Sorted Array
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/15.%20Maximum%20Depth%20Of%20Binary%20Tree.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Binary Trees - Maximum Depth Of Binary Tree
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/16.%20Binary%20Tree%20Level%20Order%20Traversal.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Binary Trees - Level Order Of Binary Tree
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/17.%20Right%20Side%20View%20Of%20Tree.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Binary Trees - Right Side View Of Tree
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/18.%20Number%20Of%20Nodes%20In%20Complete%20Tree.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Full & Complete Binary Trees - Number Of Nodes In Complete Tree.md
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/19.%20Validate%20Binary%20Search%20Tree.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Binary Search Trees - Validate Binary Search Tree
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/20.%20Number%20Of%20Islands.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              2D Arrays - Number Of Islands
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/21.%20Rotting%20Oranges.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              2D Arrays - Rotting Oranges
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/22.%20Walls%20And%20Gates.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              2D Arrays - Walls And Gates
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/23.%20Time%20Needed%20To%20Inform%20All%20Employees.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Graphs - Time Needed To Inform All Employees
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/24.%20Course%20Scheduler.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Graphs - Course Scheduler
+            </a>
+            <ul>
+              <li>
+                Featuring
+                <a
+                  href="https://en.wikipedia.org/wiki/Topological_sorting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Topological Sort Algorithm</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/25.%20Network%20Time%20Delay.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Graphs - Network Time Delay
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/26.%20Minimum%20Cost%20Of%20Climbing%20Stairs.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Dynamic Programming - Minimum Cost Of Climbing Stairs
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/27.%20Knight%20Probability%20In%20Chessboard.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Dynamic Programming - Knight Probability In Chessboard
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/28.%20Sudoku%20Solver.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Backtracking - Sudoku Solver
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/29.%20Monarchy.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Interface Design - Monarchy
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Insidiae/js-algos-and-data-structs/blob/main/FAANG%20Interview%20Questions/30.%20Implement%20Prefix%20Trie.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tries - Implement Prefix Trie
+            </a>
+          </li>
+        </ol>
       </section>
 
       <section id="References" class="main-section">
