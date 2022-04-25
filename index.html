@@ -134,11 +134,16 @@
           <h1>JavaScript Algorithms and Data Structures</h1>
         </header>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam tempora
-          cum magni? Placeat officia aut perferendis tempore? Ullam harum vero
-          iusto exercitationem! Necessitatibus ratione enim dicta numquam
-          accusantium fugit adipisci?
+        <p class="mt-3">
+          These project is a collection of my notes while taking the
+          <a
+            href="https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            JavaScript Algorithms and Data Structures Masterclass
+          </a>
+          Udemy course.
         </p>
       </section>
 
@@ -146,8 +151,6 @@
         <header>
           <h2>Problem Solving Patterns</h2>
         </header>
-
-        <em> </em>
 
         <em>
           <ul>
@@ -164,17 +167,54 @@
           </ul>
         </em>
 
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam nam
-          consequatur minus delectus totam odio magnam fugit, ut voluptatibus
-          ipsa minima facere eos quod repudiandae libero doloremque voluptas.
-          Quod, tempore.
+        <p class="mt-3">
+          Almost everything we do in programming requires some kind of
+          algorithm. Different problems, conditions, and/or requirements can
+          make some algorithms more effective than others. Having some
+          understanding of common problem solving patterns can help us see
+          opportunities for more effectively solving problems and knowing which
+          data structure and/or algorithm are best suited for the job.
         </p>
+        <p>Here are some common problem solving patterns:</p>
         <ol>
-          <li>Frequency Counter</li>
-          <li>Multiple Pointers</li>
-          <li>Sliding Window</li>
-          <li>Divide and Conquer</li>
+          <li>
+            <strong>Frequency Counter</strong> - Some problems often require
+            keeping track of the frequency of values in some collection of data
+            (e.g. Arrays). Instead of using nested loops to count how many times
+            a specific value occurs, the Frequency Counter pattern makes use of
+            objects or sets to increment the frequency of specific values while
+            passing through the collection only once.
+          </li>
+          <li>
+            <strong>Multiple Pointers</strong> - This pattern is especially
+            useful when a collection of data is structured in predictable ways
+            (e.g. when an array of numbers is already sorted). The Multiple
+            Pointers pattern takes advantage of the predictable structure of the
+            collection to more effectively iterate through the items by (as the
+            name implies) creating multiple pointers at different positions,
+            then moving to different positions through the collection (i.e.
+            start/middle/end) until a certain condition is fulfilled or all
+            items in the collection are visited.
+          </li>
+          <li>
+            <strong>Sliding Window</strong> - Some types of problems may involve
+            keeping track of a subset of data in a collection of items. The
+            Sliding Window pattern is an effective way to keep track and/or
+            manipulate subsets of data in a collection, by creating a "window"
+            of a certain size (that may or may not get smaller or larger
+            depending on certain conditions) using multiple pointers, then
+            moving the "window" by moving the start and end pointers across the
+            collection.
+          </li>
+          <li>
+            <strong>Divide and Conquer</strong> - This is another pattern that
+            is especially useful for collections that have a predictable
+            structure. Depending on the required conditions, one can
+            tremendously reduce the time needed to iterate through the
+            collection if the predictable structure of the items allows you to
+            ignore unnecessary parts of the collection if they don't fulfill a
+            certain condition.
+          </li>
         </ol>
       </section>
 
@@ -195,13 +235,33 @@
             </li>
           </ul>
         </em>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro illum
-          aliquam corporis possimus ipsa numquam dolor sequi atque amet a in
-          laborum, tempore provident pariatur dolore quasi. Fugit, ea. Dolore.
+
+        <p class="mt-3">
+          <strong>Recursion</strong> is a method of solving a computational
+          problem where the solution depends on solutions to smaller instances
+          of the same problem. In programming, this means using functions that
+          call themselves from within their own code. The approach can be
+          applied to many types of problems, and recursion is one of the central
+          ideas of computer science. Indeed, we're going to see recursion being
+          used in several of the data structures and algorithms we'll be
+          exploring later.
         </p>
 
         <h4>Example: Fibonacci</h4>
+
+        <p>
+          Write a recursive function called <code>fib</code> which accepts a
+          number and returns the nth number in the
+          <a
+            href="https://en.wikipedia.org/wiki/Fibonacci_number"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Fibonacci sequence</a
+          >. Recall that the Fibonacci sequence is the sequence of whole numbers
+          1, 1, 2, 3, 5, 8, ... which starts with 1 and 1, and where every
+          number thereafter is equal to the sum of the previous two numbers.
+        </p>
         <pre>
           <code class="language-js">function fib(num){
   if(num <= 2) return 1;
@@ -210,6 +270,10 @@
         </pre>
 
         <h4>🔥 Hotshot One-liner</h4>
+        <p class="mt-3">
+          With a clever use of some modern ES6+ JavaScript syntax, we can
+          simplify the solution into just one line:
+        </p>
         <pre>
           <code class="language-js">const fib = num => num <= 2 ? 1 : fib(num - 1) + fib(num - 2);</code>
         </pre>
@@ -229,18 +293,100 @@
           <a href="Searching Algorithms/index.html"> Live Demo (WIP) </a>
         </em>
 
+        <p class="mt-3">
+          Some problems may involve finding a specific value (or values) within
+          a given collection of data (e.g. Arrays, strings, etc.) The simplest
+          way to search for a specific value is to look at
+          <em>every single item in the collection</em> and check if it is the
+          item we want.
+        </p>
         <p>
-          Some ways to search through a collection of elements (i.e. Arrays):
+          JavaScript has built-in methods for searching through such
+          collections. For example, here are some useful array search methods:
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <code>indexOf()</code>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <code>includes()</code>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <code>find()</code>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <code>findIndex()</code>
+            </a>
+          </li>
+        </ul>
+        <p>
+          For many everyday use-cases, these built-in search methods can do
+          their job well enough. However, for more complex problems, we may need
+          to look at other, potentially more effective ways to search through a
+          given collection.
+        </p>
+        <p>
+          Let's look at some ways to search through a collection of elements:
         </p>
         <ol>
-          <li>Linear Search</li>
-          <li>Binary Search</li>
+          <li>
+            <strong>Linear Search</strong> - This is the simplest way to search
+            for an item. Linear Search iterates over the collection from start
+            to end, checking every single item to see if they are what we are
+            looking for.
+          </li>
+          <li>
+            <strong>Binary Search</strong> - Using the Divide and Conquer
+            pattern, Binary Search takes advantage of a predictably structured
+            collection. For example, when an array of integers is sorted in
+            ascending order, we can safely ignore previous items if the number
+            we're looking for is greater than the current item (or ignore all
+            next items if the current item is less than what we're looking for).
+            With Binary Search, we can start at the middle of the collection,
+            and safely ignore one half of the remaining items depending on the
+            condition, then repeat the same process for the remaining items
+            until we find the item or we run out of items to check.
+          </li>
         </ol>
 
         <p>There are also more clever ways to search through strings:</p>
         <ol>
-          <li>Naive String Search</li>
-          <li>KMP String Search</li>
+          <li>
+            <strong>Naive String Search</strong> - Similar to Linear Search,
+            Naive String Search simply iterates from start to end of the string
+            to check if a given pattern is found.
+          </li>
+          <li>
+            <strong>Knuth-Morris-Pratt (KMP) String Search</strong> - searches
+            for occurrences of a "word" <code>W</code> within a main "text
+            string" <code>S</code> by employing the observation that when a
+            mismatch occurs, the word itself embodies sufficient information to
+            determine where the next match could begin, thus bypassing
+            re-examination of previously matched characters.
+          </li>
         </ol>
       </section>
 
@@ -253,11 +399,47 @@
           <a href="Sorting Algorithms/index.html"> Live Demo (WIP) </a>
         </em>
 
-        <p>Basic Sorting Algorithms</p>
+        <p class="mt-3">
+          Sorting is the process of rearranging iems in a collection such that
+          the items are in some predictable order. There are many ways to sort a
+          collection of items, for example:
+        </p>
+        <ul>
+          <li>Sorting numbers from smallest to largest (or vice versa)</li>
+          <li>Sorting strings in alphabetical order</li>
+          <li>Sorting dates in chronoligical order</li>
+        </ul>
+        <p>Here are some basic Sorting Algorithms:</p>
         <ol>
-          <li>Bubble Sort</li>
-          <li>Selection Sort</li>
-          <li>Insertion Sort</li>
+          <li>
+            <strong>Bubble Sort</strong> - Sometimes referred to as sinking
+            sort, Bubble Sort is the simplest sorting algorithm that works by
+            repeatedly swapping the adjacent elements if they are in wrong
+            order. It works by having the largest values "bubble" up to the top
+            (or smaller values to the bottom). This simple algorithm performs
+            poorly in real world use and is used primarily as an educational
+            tool to introduce the concept of a sorting algorithm.
+          </li>
+          <li>
+            <strong>Selection Sort</strong> - Sorts an array by repeatedly
+            finding the smallest element (considering ascending order) from the
+            unsorted part and putting it at the beginning. The algorithm divides
+            the input list into two parts: a sorted sublist of items which is
+            built up from left to right at the front (left) of the list and a
+            sublist of the remaining unsorted items that occupy the rest of the
+            list.
+          </li>
+          <li>
+            <strong>Insertion Sort</strong> - A simple sorting algorithm that
+            builds the final sorted array (or list) one item at a time. Much
+            like Selection Sort, Insertion Sort also divides the input list into
+            two parts (unsorted and sorted sublists). At each iteration,
+            insertion sort removes one element from the unsorted input data,
+            finds the location it belongs within the sorted list, and inserts it
+            there. It repeats until no unsorted input elements remain. Insertion
+            Sort also works similar to the way people sort playing cards in
+            their hands.
+          </li>
         </ol>
 
         <p>
@@ -265,8 +447,43 @@
           efficiently sort a collection of items:
         </p>
         <ol>
-          <li>Merge Sort</li>
-          <li>Quick Sort</li>
+          <li>
+            <strong>Merge Sort</strong> - A divide and conquer algorithm that
+            was invented by John von Neumann in 1945. It takes advantage of the
+            fact that arrays of size 1 or 0 are always sorted. Merge Sort
+            divides the input array into two halves, calls itself for the two
+            halves until the array is divided into subarrays of size 1 or 0, and
+            then merges the two sorted halves until one full sorted array
+            remains. A <code>merge()</code> helper function is useful for
+            repeatedly merging the split subarrays.
+          </li>
+          <li>
+            <p>
+              <strong>Quicksort</strong> - A commonly used sorting algorithm
+              developed by British computer scientist Tony Hoare in 1959 and
+              published in 1961. It is a Divide and Conquer algorithm that picks
+              an element as pivot and partitions the given array around the
+              picked pivot.
+            </p>
+            <p>
+              There are many different versions of Quicksort that pick pivot in
+              different ways:
+            </p>
+            <ul>
+              <li>Always pick first element as pivot.</li>
+              <li>Pick median as pivot. (ideal)</li>
+              <li>Always pick last element as pivot.</li>
+              <li>Pick a random element as pivot.</li>
+            </ul>
+            <p>
+              Quicksort partitions the other elements into two sub-arrays,
+              according to whether they are less than or greater than the pivot.
+              For this reason, it is sometimes called
+              <em>partition-exchange sort</em>. The sub-arrays are then sorted
+              recursively. This can be done in-place, requiring small additional
+              amounts of memory to perform the sorting.
+            </p>
+          </li>
         </ol>
 
         <p>
@@ -274,12 +491,25 @@
           efficient for dealing with specific types of items:
         </p>
         <ol>
-          <li>Radix Sort (Useful for sorting integers and short strings)</li>
+          <li>
+            <strong>Radix Sort</strong> - A non-comparative sorting algorithm.
+            Unlike the previous sorting algorithms, it avoids comparison by
+            creating and distributing elements into buckets according to their
+            radix. For elements with more than one significant digit, this
+            bucketing process is repeated for each digit, while preserving the
+            ordering of the prior step, until all digits have been considered.
+            For this reason, Radix Sort has also been called
+            <em>Bucket Sort</em> and <em>Digital Sort</em>. Radix Sort is
+            especially useful for sorting integers and short strings.
+          </li>
         </ol>
 
         <p>More Sorting Algorithms</p>
         <ol>
-          <li>Heapsort (To be discussed later in the Binary Heaps section)</li>
+          <li>
+            <strong>Heapsort</strong> - To be discussed later in the
+            <a href="#Binary_Heaps">Binary Heaps</a> section
+          </li>
         </ol>
       </section>
 
@@ -1461,10 +1691,16 @@ trie
           <h2>References</h2>
         </header>
 
+        <p class="mt-3">
+          These are the online courses I've taken when building this project,
+          and thus can be considered as my main references:
+        </p>
         <ul>
           <li>
             <a
               href="https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Udemy - JavaScript Algorithms and Data Structures Masterclass
             </a>
@@ -1472,6 +1708,8 @@ trie
           <li>
             <a
               href="https://academy.zerotomastery.io/p/master-the-coding-interview-data-structures-algorithms"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Zero To Mastery - Master the Coding Interview: Data Structures +
               Algorithms
@@ -1480,9 +1718,82 @@ trie
           <li>
             <a
               href="https://academy.zerotomastery.io/p/master-the-coding-interview-faang-interview-prep"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Zero To Mastery - Master the Coding Interview: Big Tech (FAANG)
               Interviews
+            </a>
+          </li>
+        </ul>
+
+        <p>
+          Additionally, I also used several other references to help make my
+          notes for the different topics dicussed above:
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://en.wikipedia.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Wikipedia
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.geeksforgeeks.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GeeksforGeeks
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Youtube - freeCodeCamp.org
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/c/BackToBackSWE"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Youtube - Back To Back SWE
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.toptal.com/developers/sorting-algorithms"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Toptal - Sorting Algorithms Animations
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://visualgo.net/en"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              VisuAlgo - Visualising data structures and algorithms through
+              animation
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.bigocheatsheet.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Big O Cheat Sheet
             </a>
           </li>
         </ul>
@@ -1511,6 +1822,6 @@ trie
     <script src="navbar.js"></script>
 
     <!-- OPTIONAL: Run freeCodeCamp tests for the Documentation Page project -->
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
   </body>
 </html>
